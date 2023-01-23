@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Swati}
+\tagline{}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \phone{+91-9896021503}
+  \email{swatigrmj@gmail.com}
+%  \mailaddress{Address, Street, 00000 County}
+%   \location{Kurukshetra, Haryana, India}
+%  \homepage{marissamayr.tumblr.com/}
+
+  \linkedin{linkedin.com/in/swatigrmj}
+ %  \github{github.com/abhishakvarshney}
+ %  \skype{live:abhishakvarshney}
+   %   \phone{000-00-0000}
+% I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Education}
+\cvevent{NIT Kurukshetra}{B.Tech - Electronics and Communication Engineering. CGPA: 9.0598}{ 2017 -- 2021}{}
+%\divider
+\cvevent{Aggarsain Public School, Kurukshetra}{Intermediate/+2;  CBSE Result: 93.6\%}{2015 -- 2017}{}
+% \divider
+\cvevent{Aggairsain Public School, Kurukshetra}{High-School;  CBSE Result: 10 CGPA}{2014 -- 2015}{}
+% \divider
+
+\cvsection{Experience}
+\cvevent{Silicon Design Engineer 1}{AMD India Pvt. Ltd.}{June 2021 -- Present}{Bengaluru,India}
+\cvproject{\textit{USB IP Verification}}
+\begin{itemize}
+\item Debugged both Normal and NLp test cases, did checked the Coverage of the IP Design and did performance analysis of the Design
+\item I explored different tools PA/PTPX/Perf Analyzer and protocol analyzer while working on the Projects
+\item Got insight in the all stages of a project execution
+\itme Got HOM Sept 2022 and Nov 2021
+\item\bf{Tools}{: VCS Verdi, Performance Analyzer, Protocol Analyzer,Power Aware}
+\end{itemize}
+% \begin{itemize}
+% \item Research and development of Computer Vision algorithms centered around the video surveillance domain in collaboration with NCETIS, IIT Bombay.
+% \smallskip
+% \item Working with team on design, development and integration of real-time video analytic solution.
+% \smallskip
+% \item Leading the team on the training and evaluation of Deep Neural Network models.
+% \smallskip
+% \item Experience with performance analysis, optimizations and benchmark evaluations.
+% \end{itemize}
+
+\divider
+
+\cvevent{INTERNSHIP}{STMicroelectronics Pvt. Ltd.}{Jan 2020 - June 2020}{Greater Noida,India}
+\cvproject{\textit{Deployment of ExcelliCon for Certification of Timing constraints in a Complex soc Design}}
+\begin{itemize}
+\item Understanding of different Timing Exceptions
+\item Usage and deployment of the tool Concert to certify constraints and exceptions mainly False Path and Multicycle path
+[FPs and MCPs] where they are classified as "Structural" and "Timing intent" Exceptions and developing the SVAs for Timing Intent Exceptions.
+\item Providing solutions for design convergence using the algorithms used by the tool.
+\smallskip
+\item\bf{Tool}{: Excellicon Concert}
+% \item Incorporated various Machine Learning features in Atos's internal tools, in order to utilize the performance gain offered by Machine Learning algorithms.
+% \item Deploying machine learning solution on cloud.
+\end{itemize}
+
+\divider
+\cvevent{Training}{Maven Silicon}{May 2019 - July 2019}{Online}
+\cvproject{\textit{Basic ASIC design Flow, Digital Electronics}}
+\begin{itemize}
+\item Verilog HDL- Coding for Synthesis and Simulation
+%\item Usage and deployment of the tool Concert to certify constraints and exceptions mainly False Path and Multicycle path
+%[FPs and MCPs] where they are classified as "Structural" and "Timing intent" Exceptions and developing the SVAs for Timing Intent Exceptions.
+%\item Providing solutions for design convergence using the algorithms used by the tool.
+%\smallskip
+\item\bf{Tool}{: Questa Simulator, Xilinx Vivado}
+
+% %\divider
+
+\cvsection{Certification}
+\begin{itemize}
+    \item\bf{Python-DS-ML}\normalfont{: Perfect Plan B}
+    \item\bf{Analog Electronic Circuit}\normalfont{:  Youtube NPTEL}
+    %\item\bf{Introduction to Python Programming}\normalfont{: Udemy}
+    %\item\bf{MongoDB Basics}\normalfont{: MongoDB Inc. -- MongoDB University}
+    %\item\bf{SQL Fundamental Course}\normalfont{: SOLOLearn}
+\end{itemize}
+
+\cvsection{Achievements}
+\begin{itemize}
+
+\item Department Rank 1 (DR 1) in semester 7
+\item Winner of E-Modelling event, Techspardha’19 (Technical fest)
+
+\item School topper of Class 12
+
+\item NCC Cadet with A - certificate
+\end{itemize}
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Sleeping \& dreaming about work,
+%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%   20/15em/accent!40/Spending time with family,
+%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
+%   5/8em/accent!20/Baking cupcakes
+% }
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
